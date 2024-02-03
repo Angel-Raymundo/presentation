@@ -1,9 +1,9 @@
-import Photo from "./../components/Photo";
+import Photo from "../components/Photo";
+import Button from "../components/Button";
+import Hamburger from "../components/Hamburger";
 import SocialMedia from "../components/SocialMedia";
-import Hamburger from "./../components/Hamburger";
-import Information from "../components/Information";
 
-const About = () => {
+const Portfolio = () => {
   return (
     <div className="flex h-screen justify-start items-center">
       <div className="w-1/3 hidden lg:block">
@@ -23,25 +23,28 @@ const About = () => {
           <div className="relative w-10/12 pt-[6vh] pl-5 overflow-y-scroll no-scrollbar">
             <div className="absolute bg-black h-1 w-40 mt-[100px] rounded"></div>
             <p className="text-6xl font-sans font-bold leading-[6.75rem]">
-              About
+              Portfolio
             </p>
 
-            <p className="mt-9 text-xl font-mono font-medium">
-              As a junior web developer, I'm passionate about creating
-              innovative and user-friendly digital experiences. I'm eager to
-              collaborate, learn, and contribute to exciting projects that push
-              boundaries and make a positive impact. Let's build something
-              amazing together!
+            <p className="mt-[8vh] text-xl font-mono font-medium">
+              I have completed several projects using languages such as C++,
+              Java, JavaScript, Python, web pages using HTML, CSS, JavaScript,
+              PHP, and technologies like React and Vue. My GitHub repository has
+              been neglected for various reasons, but I will be updating it with
+              exciting projects for you to observe my work.
             </p>
 
-            <Information
-              fName="Angel Raymundo"
-              lName="Jimenez Dominguez"
-              address="Zumpango, Mexico State"
-              age="21 years"
-              mail="jimray214@gmail.com"
-              phone="+52 55 84197257"
-            />
+            <div className="flex flex-row w-8/12 mt-[11vh]">
+              <Button
+                type="button"
+                style="flex flex-row justify-center items-center mb-9 h-14 bg-black border border-2 border-black py-8 px-9 text-white font-medium font-bold transition-all duration-700 ease-in-out hover:bg-white hover:text-black"
+                click={() => {
+                  window.open("https://github.com/Angel-Raymundo", "_blank");
+                }}
+              >
+                CHECK OUT MY REPO
+              </Button>
+            </div>
           </div>
 
           <div className="flex flex-col justify-evenly items-center w-20 h-full border-l-2 border-black">
@@ -70,4 +73,4 @@ const About = () => {
     </div>
   );
 };
-export default About;
+export default Portfolio;

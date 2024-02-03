@@ -1,9 +1,10 @@
-import Photo from "./../components/Photo";
-import Button from "./../components/Button";
-import Hamburger from "./../components/Hamburger";
+import Photo from "../components/Photo";
+import Button from "../components/Button";
+import Hamburger from "../components/Hamburger";
 import SocialMedia from "../components/SocialMedia";
+import { Link } from "react-router-dom";
 
-const Portfolio = () => {
+const Home = () => {
   return (
     <div className="flex h-screen justify-start items-center">
       <div className="w-1/3 hidden lg:block">
@@ -19,30 +20,47 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-[80vh]">
-          <div className="relative w-10/12 pt-[6vh] pl-5 overflow-y-scroll no-scrollbar">
+        <div className="flex justify-between w-full h-full">
+          <div className="relative w-10/12 pt-[6vh] pl-5">
             <div className="absolute bg-black h-1 w-40 mt-[100px] rounded"></div>
             <p className="text-6xl font-sans font-bold leading-[6.75rem]">
-              Portfolio
+              Ángel Jiménez
             </p>
 
             <p className="mt-[8vh] text-xl font-mono font-medium">
-              I have completed several projects using languages such as C++,
-              Java, JavaScript, Python, web pages using HTML, CSS, JavaScript,
-              PHP, and technologies like React and Vue. My GitHub repository has
-              been neglected for various reasons, but I will be updating it with
-              exciting projects for you to observe my work.
+              Junior web developer passionate about crafting innovative digital
+              experiences.
             </p>
 
             <div className="flex flex-row w-8/12 mt-[11vh]">
               <Button
                 type="button"
-                style="flex flex-row justify-center items-center mb-9 h-14 bg-black border border-2 border-black py-8 px-9 text-white font-medium font-bold transition-all duration-700 ease-in-out hover:bg-white hover:text-black"
+                style="flex justify-center items-center bg-black h-14 border border-2 border-black py-8 px-9 text-white font-medium font-bold transition-all duration-700 ease-in-out hover:bg-white hover:text-black"
+                click={() => {}}
+              >
+                <Link to="/contact">GET IN TOUCH</Link>
+              </Button>
+              <Button
+                type="button"
+                style="flex flex-row justify-center items-center h-14 bg-white border border-2 border-black ml-9 py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-black hover:text-white group"
                 click={() => {
-                  window.open("https://github.com/Angel-Raymundo", "_blank");
+                  window.open(
+                    "https://drive.google.com/file/d/1TMGHwtT6BwXwvHIFjF-pmr2kOAeDz-Lc/view?usp=sharing",
+                    "_blank"
+                  );
                 }}
               >
-                CHECK OUT MY REPO
+                <Photo
+                  image="downloadB"
+                  style="mr-2 h-6 transition-all duration-700 ease-in-out group-hover:hidden"
+                  alt="Download"
+                />
+                <Photo
+                  image="downloadW"
+                  style="bg-white rounded mr-2 h-6 hidden transition-all duration-700 ease-in-out group-hover:block "
+                  alt="Download"
+                />
+                DOWNLOAD CV
               </Button>
             </div>
           </div>
@@ -73,4 +91,4 @@ const Portfolio = () => {
     </div>
   );
 };
-export default Portfolio;
+export default Home;

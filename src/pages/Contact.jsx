@@ -1,10 +1,9 @@
-import Photo from "./../components/Photo";
-import Button from "./../components/Button";
-import Hamburger from "./../components/Hamburger";
+import Photo from "../components/Photo";
+import Button from "../components/Button";
+import Hamburger from "../components/Hamburger";
 import SocialMedia from "../components/SocialMedia";
-import { Link } from "react-router-dom";
 
-const Home = () => {
+const Contact = () => {
   return (
     <div className="flex h-screen justify-start items-center">
       <div className="w-1/3 hidden lg:block">
@@ -20,47 +19,46 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-full">
-          <div className="relative w-10/12 pt-[6vh] pl-5">
+        <div className="flex justify-between w-full  h-[80vh]">
+          <div className="relative w-10/12 pt-[6vh] pl-5 overflow-y-scroll no-scrollbar">
             <div className="absolute bg-black h-1 w-40 mt-[100px] rounded"></div>
             <p className="text-6xl font-sans font-bold leading-[6.75rem]">
-              Ángel Jiménez
+              Contact
             </p>
 
             <p className="mt-[8vh] text-xl font-mono font-medium">
-              Junior web developer passionate about crafting innovative digital
-              experiences.
+              If you're interested in my work and want me to collaborate with
+              you on a project, contact me and we can discuss it further. It
+              would be a pleasure for me to collaborate with you
             </p>
 
-            <div className="flex flex-row w-8/12 mt-[11vh]">
+            <div className="flex flex-row mt-[11vh] justify-around">
               <Button
                 type="button"
-                style="flex justify-center items-center bg-black h-14 border border-2 border-black py-8 px-9 text-white font-medium font-bold transition-all duration-700 ease-in-out hover:bg-white hover:text-black"
-                click={() => {}}
-              >
-                <Link to="/contact">GET IN TOUCH</Link>
-              </Button>
-              <Button
-                type="button"
-                style="flex flex-row justify-center items-center h-14 bg-white border border-2 border-black ml-9 py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-black hover:text-white group"
+                style="flex flex-col justify-center items-center bg-white h-28 w-60 border border-2 border-black py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-[#E5E5E5] hover:text-black"
                 click={() => {
-                  window.open(
-                    "https://drive.google.com/file/d/1TMGHwtT6BwXwvHIFjF-pmr2kOAeDz-Lc/view?usp=sharing",
-                    "_blank"
-                  );
+                  const email = "jimray214@gmail.com";
+                  window.location.href = `mailto:${email}`;
                 }}
               >
                 <Photo
-                  image="downloadB"
-                  style="mr-2 h-6 transition-all duration-700 ease-in-out group-hover:hidden"
-                  alt="Download"
+                  image="mail"
+                  style="h-14 w-14 mb-2 transition-all duration-700 ease-in-out"
+                  alt="Mail"
                 />
+                jimray214@gmail.com
+              </Button>
+              <Button
+                type="button"
+                style="flex flex-col justify-center items-center bg-white h-28 w-60 border border-2 border-black py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-[#E5E5E5] hover:text-black"
+                click={() => {}}
+              >
                 <Photo
-                  image="downloadW"
-                  style="bg-white rounded mr-2 h-6 hidden transition-all duration-700 ease-in-out group-hover:block "
-                  alt="Download"
+                  image="phone"
+                  style="h-14 w-14 mb-2 transition-all duration-700 ease-in-out"
+                  alt="Phone"
                 />
-                DOWNLOAD CV
+                +52 55 8419 7257
               </Button>
             </div>
           </div>
@@ -91,4 +89,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Contact;

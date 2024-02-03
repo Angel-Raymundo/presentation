@@ -1,9 +1,9 @@
-import Photo from "./../components/Photo";
-import Button from "./../components/Button";
-import Hamburger from "./../components/Hamburger";
+import Photo from "../components/Photo";
 import SocialMedia from "../components/SocialMedia";
+import Hamburger from "../components/Hamburger";
+import Information from "../components/Information";
 
-const Contact = () => {
+const About = () => {
   return (
     <div className="flex h-screen justify-start items-center">
       <div className="w-1/3 hidden lg:block">
@@ -19,48 +19,29 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full  h-[80vh]">
+        <div className="flex justify-between w-full h-[80vh]">
           <div className="relative w-10/12 pt-[6vh] pl-5 overflow-y-scroll no-scrollbar">
             <div className="absolute bg-black h-1 w-40 mt-[100px] rounded"></div>
             <p className="text-6xl font-sans font-bold leading-[6.75rem]">
-              Contact
+              About
             </p>
 
-            <p className="mt-[8vh] text-xl font-mono font-medium">
-              If you're interested in my work and want me to collaborate with
-              you on a project, contact me and we can discuss it further. It
-              would be a pleasure for me to collaborate with you
+            <p className="mt-9 text-xl font-mono font-medium">
+              As a junior web developer, I'm passionate about creating
+              innovative and user-friendly digital experiences. I'm eager to
+              collaborate, learn, and contribute to exciting projects that push
+              boundaries and make a positive impact. Let's build something
+              amazing together!
             </p>
 
-            <div className="flex flex-row mt-[11vh] justify-around">
-              <Button
-                type="button"
-                style="flex flex-col justify-center items-center bg-white h-28 w-60 border border-2 border-black py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-[#E5E5E5] hover:text-black"
-                click={() => {
-                  const email = "jimray214@gmail.com";
-                  window.location.href = `mailto:${email}`;
-                }}
-              >
-                <Photo
-                  image="mail"
-                  style="h-14 w-14 mb-2 transition-all duration-700 ease-in-out"
-                  alt="Mail"
-                />
-                jimray214@gmail.com
-              </Button>
-              <Button
-                type="button"
-                style="flex flex-col justify-center items-center bg-white h-28 w-60 border border-2 border-black py-8 px-9 text-black font-medium font-bold transition-all duration-700 ease-in-out hover:bg-[#E5E5E5] hover:text-black"
-                click={() => {}}
-              >
-                <Photo
-                  image="phone"
-                  style="h-14 w-14 mb-2 transition-all duration-700 ease-in-out"
-                  alt="Phone"
-                />
-                +52 55 8419 7257
-              </Button>
-            </div>
+            <Information
+              fName="Angel Raymundo"
+              lName="Jimenez Dominguez"
+              address="Zumpango, Mexico State"
+              age="21 years"
+              mail="jimray214@gmail.com"
+              phone="+52 55 84197257"
+            />
           </div>
 
           <div className="flex flex-col justify-evenly items-center w-20 h-full border-l-2 border-black">
@@ -89,4 +70,4 @@ const Contact = () => {
     </div>
   );
 };
-export default Contact;
+export default About;
